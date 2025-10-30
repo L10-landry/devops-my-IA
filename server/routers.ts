@@ -6,6 +6,7 @@ import { z } from "zod";
 import { invokeLLM } from "./_core/llm";
 import { executeCode, getSupportedLanguages } from "./codeExecutor";
 import * as db from "./db";
+import * as gamification from "./gamification";
 
 export const appRouter = router({
   system: systemRouter,
@@ -240,6 +241,37 @@ etc.`;
         return await db.getTutorialsByLanguage(input.language);
       }),
   }),
+
+  // Gamification
+  gamification: router({
+    getStats: protectedProcedure.query(async ({ ctx }) => {
+      return await gamification.getUserStats(ctx.user.id);
+    }),
+    getBadges: protectedProcedure.query(async ({ ctx }) => {
+      return await gamification.getUserBadges(ctx.user.id);
+    }),
+    getLeaderboard: publicProcedure
+      .input(z.object({ limit: z.number().default(10) }))
+      .query(async ({ input }) => {
+        return await gamification.getLeaderboard(input.limit);
+      }),
+    recordCodeExecution: protectedProcedure.mutation(async ({ ctx }) => {
+      await gamification.recordCodeExecution(ctx.user.id);
+      await gamification.updateStreak(ctx.user.id);
+      return { success: true };
+    }),
+    recordQuestion: protectedProcedure.mutation(async ({ ctx }) => {
+      await gamification.recordQuestion(ctx.user.id);
+      await gamification.updateStreak(ctx.user.id);
+      return { success: true };
+    }),
+    recordSnippetSaved: protectedProcedure.mutation(async ({ ctx }) => {
+      await gamification.recordSnippetSaved(ctx.user.id);
+      await gamification.updateStreak(ctx.user.id);
+      return { success: true };
+    }),
+  }),
+
 });
 
 export type AppRouter = typeof appRouter;

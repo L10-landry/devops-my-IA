@@ -40,3 +40,16 @@
 - [ ] Certificats de signature produits
 - [ ] Publication sur Google Play Store
 - [ ] Publication sur Apple App Store
+
+## Système de Gamification
+
+- [x] Schéma de base de données pour badges, points et niveaux
+- [x] Système de points (exécution de code, questions posées, snippets sauvegardés)
+- [x] Système de niveaux (débutant, intermédiaire, avancé, expert)
+- [x] Badges d'accomplissement (premiers pas, polyglotte, expert, etc.)
+- [x] Classement global des utilisateurs
+- [x] Récompenses quotidiennes et défis
+- [x] Interface de profil avec statistiques
+- [x] Notifications pour les nouveaux badges
+- [x] Leaderboard public
+- [x] Système de streaks (jours consécutifs)
