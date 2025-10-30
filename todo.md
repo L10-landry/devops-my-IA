@@ -53,3 +53,12 @@
 - [x] Notifications pour les nouveaux badges
 - [x] Leaderboard public
 - [x] Système de streaks (jours consécutifs)
+
+## Système de Notifications
+
+- [x] Notifications en temps réel pour nouveaux badges
+- [x] Notifications pour montée de niveau
+- [x] Notifications pour streaks atteints
+- [x] Toast notifications côté client
+- [x] Service de notifications backend
+- [x] Hook de notifications pour les actions utilisateur

@@ -7,6 +7,7 @@ import {
   dailyChallenges,
   userChallengeCompletions,
 } from "../drizzle/schema";
+import * as notifications from "./notifications";
 
 const POINTS_PER_CODE_EXECUTION = 10;
 const POINTS_PER_QUESTION = 5;
@@ -224,6 +225,7 @@ export async function updateStreak(userId: number) {
 
     if (newStreak > 0 && newStreak % 7 === 0) {
       await addPoints(userId, 50, `streak_${newStreak}_days`);
+      await notifications.notifyStreakMilestone(userId, newStreak, 50);
     }
   } catch (error) {
     console.error("[Gamification] Failed to update streak:", error);
@@ -301,6 +303,14 @@ export async function checkAndAwardBadges(userId: number) {
         await addPoints(userId, badge.pointsReward, `badge_${badge.criteria}`);
         console.log(
           `[Gamification] User ${userId} earned badge: ${badge.name}`
+        );
+        
+        // Send notification for new badge
+        await notifications.notifyBadgeUnlocked(
+          userId,
+          badge.name,
+          badge.icon,
+          badge.pointsReward
         );
       }
     }
