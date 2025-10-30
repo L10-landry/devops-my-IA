@@ -26,3 +26,17 @@
 - [x] Détection automatique de la langue parlée
 - [x] Feedback visuel pendant l'enregistrement
 - [x] Transcription en temps réel
+
+## Packaging et Distribution
+
+- [x] Configuration Electron pour builds desktop
+- [x] Scripts de build pour Windows (.exe/.nsis)
+- [x] Scripts de build pour macOS (.dmg)
+- [x] Scripts de build pour Linux (.AppImage/.deb)
+- [x] Guide de setup Expo pour Android et iOS
+- [x] Configuration electron-builder.json
+- [x] Documentation de packaging complète
+- [ ] Tests sur appareils réels
+- [ ] Certificats de signature produits
+- [ ] Publication sur Google Play Store
+- [ ] Publication sur Apple App Store
