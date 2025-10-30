@@ -17,3 +17,12 @@
 - [x] Système de favoris pour sauvegarder du code
 - [x] Mode sombre/clair
 - [x] Interface responsive (mobile/tablette/desktop)
+
+## Nouvelles fonctionnalités
+
+- [x] Reconnaissance vocale adaptative à la langue de l'utilisateur
+- [x] Bouton micro dans l'éditeur de code pour dicter du code
+- [x] Bouton micro dans le chat pour poser des questions vocalement
+- [x] Détection automatique de la langue parlée
+- [x] Feedback visuel pendant l'enregistrement
+- [x] Transcription en temps réel

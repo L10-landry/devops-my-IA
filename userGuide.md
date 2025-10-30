@@ -36,7 +36,7 @@ Cliquez sur "Commencer à apprendre" depuis la page d'accueil. Vous accédez à 
 
 ### Écrire et exécuter du code
 
-Dans l'éditeur, tapez votre code dans la zone de texte principale. Cliquez sur "Exécuter" pour lancer l'exécution et voir le résultat dans la zone "Sortie" en dessous. Le code s'exécute de manière sécurisée sur le serveur avec un timeout de 10 secondes maximum.
+Dans l'éditeur, tapez votre code dans la zone de texte principale ou utilisez l'icône micro en haut pour dicter votre code vocalement. La reconnaissance vocale s'adapte automatiquement au langage de programmation sélectionné. Cliquez sur "Exécuter" pour lancer l'exécution et voir le résultat dans la zone "Sortie" en dessous. Le code s'exécute de manière sécurisée sur le serveur avec un timeout de 10 secondes maximum.
 
 ### Obtenir des explications ligne par ligne
 
@@ -44,7 +44,7 @@ Après avoir écrit votre code, cliquez sur "Expliquer" pour recevoir une analys
 
 ### Discuter avec le tuteur IA
 
-Le panneau de droite dans l'éditeur contient le chat avec votre tuteur IA. Tapez vos questions dans le champ de texte et appuyez sur "Envoyer" ou la touche Entrée. L'IA a accès à votre code actuel et peut répondre à vos questions de manière contextuelle. Toutes les conversations sont sauvegardées automatiquement.
+Le panneau de droite dans l'éditeur contient le chat avec votre tuteur IA. Tapez vos questions dans le champ de texte et appuyez sur "Envoyer" ou la touche Entrée. Vous pouvez également cliquer sur l'icône micro pour poser vos questions vocalement. L'IA a accès à votre code actuel et peut répondre à vos questions de manière contextuelle. Toutes les conversations sont sauvegardées automatiquement.
 
 ### Sauvegarder vos snippets
 

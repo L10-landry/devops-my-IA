@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { Streamdown } from "streamdown";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { VoiceRecorder } from "@/components/VoiceRecorder";
 
 export default function CodeEditor() {
   const { language: urlLanguage } = useParams<{ language?: string }>();
@@ -231,6 +232,13 @@ export default function CodeEditor() {
                     {currentLang?.name}
                   </CardTitle>
                   <div className="flex gap-2">
+                    <VoiceRecorder
+                      onTranscript={(text) => setCode(prev => prev + "\n" + text)}
+                      language={selectedLanguage}
+                      variant="outline"
+                      size="sm"
+                      className="border-white/20 text-white hover:bg-white/10"
+                    />
                     <Button
                       size="sm"
                       variant="outline"
@@ -338,6 +346,13 @@ export default function CodeEditor() {
                   }}
                   placeholder="Posez une question sur votre code..."
                   className="bg-white/5 border-white/10 text-white"
+                />
+                <VoiceRecorder
+                  onTranscript={(text) => setChatMessage(prev => prev + " " + text)}
+                  language="fr"
+                  variant="outline"
+                  size="icon"
+                  className="border-white/20 text-white hover:bg-white/10"
                 />
                 <Button
                   onClick={handleSendMessage}
